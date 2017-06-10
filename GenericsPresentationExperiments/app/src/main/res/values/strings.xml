@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GenericsPresentationExperiments</string>
+
+    <string name="user_display_view_holder_name_and_age">Name: %1$s | Age: %2$d </string>
+    <string name="user_display_view_holder_married">Married</string>
+    <string name="user_display_view_holder_not_married">Not Married</string>
+
+    <string name="user_display_view_holder_active_users">Active Users: %1$d</string>
+
+    <string name="user_display_view_holder_server_status_ok">Server OK</string>
+    <string name="user_display_view_holder_server_status_down">Server DOWN</string>
+</resources>
