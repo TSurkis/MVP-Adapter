@@ -1,9 +1,9 @@
-package com.tsurkis.mvpadapter.mvpadapter;
+package com.tsurkis.mvpadapter.baseclasses.ui.mvpadapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.tsurkis.mvpadapter.baseclasses.IPresenter;
+import com.tsurkis.mvpadapter.baseclasses.architecture.IPresenter;
 
 /**
  * Created by T.Surkis on 10-Jun-17.

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GenericsPresentationExperiments</string>
+    <string name="app_name">MVP-Adapter</string>
 
     <string name="user_display_view_holder_name_and_age">Name: %1$s | Age: %2$d </string>
     <string name="user_display_view_holder_married">Married</string>

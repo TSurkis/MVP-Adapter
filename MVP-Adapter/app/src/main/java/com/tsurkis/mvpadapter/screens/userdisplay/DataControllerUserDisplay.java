@@ -1,7 +1,7 @@
 package com.tsurkis.mvpadapter.screens.userdisplay;
 
-import com.tsurkis.mvpadapter.baseclasses.Ad;
-import com.tsurkis.mvpadapter.baseclasses.User;
+import com.tsurkis.mvpadapter.baseclasses.dataobjects.Ad;
+import com.tsurkis.mvpadapter.baseclasses.dataobjects.User;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -15,7 +15,7 @@ public class DataControllerUserDisplay implements ViewContract.IUserDisplayDataC
 
     public DataControllerUserDisplay() {
         Random r = new Random();
-        int adDataCollectionSize = r.nextInt(10) + 1;
+        int adDataCollectionSize = 4;
 
         for (int index = 0; index < adDataCollectionSize; index++) {
             ads.add(new Ad("Ad number #" + String.valueOf(index)));

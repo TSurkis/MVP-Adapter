@@ -1,20 +1,19 @@
-package com.tsurkis.mvpadapter.screens.userdisplay.dataadapter;
+package com.tsurkis.mvpadapter.screens.userdisplay_modular;
 
 import android.view.View;
 import android.widget.TextView;
 
-import com.tsurkis.mvpadapter.R;
-import com.tsurkis.mvpadapter.baseclasses.User;
-import com.tsurkis.mvpadapter.dataadapter.BaseDataViewHolder;
 import com.tsurkis.mvpadapter.App;
+import com.tsurkis.mvpadapter.R;
+import com.tsurkis.mvpadapter.baseclasses.dataobjects.User;
 
 /**
  * Created by T.Surkis on 10-Jun-17.
  */
-class UserViewHolderData extends BaseDataViewHolder<User> {
+class ViewHolderUser extends ViewHolderBase {
     private TextView userNameAndAgeTextView, userMarriageStatusTextView;
 
-    UserViewHolderData(View itemView) {
+    ViewHolderUser(View itemView) {
         super(itemView);
 
         userNameAndAgeTextView = (TextView) itemView.findViewById(R.id.userNameAndAgeTextView);
@@ -22,7 +21,9 @@ class UserViewHolderData extends BaseDataViewHolder<User> {
     }
 
     @Override
-    public void setDataInViews(User user) {
+    public void setDataInViews(ViewContract.IUserDisplayPresenter.IAdapterController dataGetter) {
+        User user = dataGetter.getUserInPosition(getAdapterPosition());
+
         userNameAndAgeTextView.setText(
                 App.getInstance().getString(
                         R.string.user_display_view_holder_name_and_age,

@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.tsurkis.mvpadapter.R;
-import com.tsurkis.mvpadapter.baseclasses.User;
+import com.tsurkis.mvpadapter.baseclasses.dataobjects.User;
 import com.tsurkis.mvpadapter.App;
 import com.tsurkis.mvpadapter.screens.userdisplay.ViewContract;
 

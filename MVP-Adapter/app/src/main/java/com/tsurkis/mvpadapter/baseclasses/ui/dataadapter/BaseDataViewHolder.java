@@ -1,4 +1,4 @@
-package com.tsurkis.mvpadapter.dataadapter;
+package com.tsurkis.mvpadapter.baseclasses.ui.dataadapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

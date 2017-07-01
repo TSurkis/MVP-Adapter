@@ -1,4 +1,4 @@
-package com.tsurkis.mvpadapter.dataadapter;
+package com.tsurkis.mvpadapter.baseclasses.ui.dataadapter;
 
 import android.support.annotation.LayoutRes;
 import android.support.v7.widget.RecyclerView;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tsurkis.mvpadapter.baseclasses.IPresenter;
+import com.tsurkis.mvpadapter.baseclasses.architecture.IPresenter;
 
 /**
  * Created by T.Surkis on 10-Jun-17.

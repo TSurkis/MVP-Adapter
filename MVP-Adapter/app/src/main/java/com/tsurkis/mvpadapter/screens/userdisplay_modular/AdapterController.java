@@ -1,9 +1,8 @@
-package com.tsurkis.mvpadapter.screens.userdisplay;
+package com.tsurkis.mvpadapter.screens.userdisplay_modular;
 
 import android.util.SparseIntArray;
 
 import com.tsurkis.mvpadapter.baseclasses.dataobjects.Ad;
-import com.tsurkis.mvpadapter.baseclasses.architecture.BasePresenter;
 import com.tsurkis.mvpadapter.baseclasses.dataobjects.Header;
 import com.tsurkis.mvpadapter.baseclasses.dataobjects.User;
 
@@ -14,16 +13,18 @@ import static com.tsurkis.mvpadapter.baseclasses.Constants.UserDisplayAdapterVie
 import static com.tsurkis.mvpadapter.baseclasses.Constants.UserDisplayAdapterViewTypes.USER;
 
 /**
- * Created by T.Surkis on 10-Jun-17.
+ * Created by T.Surkis on 01-Jul-17.
  */
-public class PresenterUserDisplay extends BasePresenter<ViewContract.IUserDisplayView> implements ViewContract.IUserDisplayPresenter {
-    private final ViewContract.IUserDisplayDataController dataController = new DataControllerUserDisplay();
+class AdapterController implements ViewContract.IUserDisplayPresenter.IAdapterController {
+    private final ViewContract.IUserDisplayDataController dataController;
+
     private final ArrayList<Integer> viewTypes = new ArrayList<>();
     private final SparseIntArray viewIndexToDataIndexLocation = new SparseIntArray();
 
     private Header header;
 
-    PresenterUserDisplay() {
+    AdapterController(ViewContract.IUserDisplayDataController dataController) {
+        this.dataController = dataController;
         viewTypes.add(HEADER);
         int numberOfUsers = dataController.getNumberOfUsers();
         boolean serverWorking = dataController.getNumberOfUsers() != 0;
@@ -57,20 +58,13 @@ public class PresenterUserDisplay extends BasePresenter<ViewContract.IUserDispla
     }
 
     @Override
-    public void loadView(ViewContract.IUserDisplayView view) {
-        super.loadView(view);
-
-        getView().displayAdapter();
+    public int getCollectionSize() {
+        return dataController.getNumberOfAds() + dataController.getNumberOfUsers() + 1;
     }
 
     @Override
-    public Header getHeaderData() {
-        return header;
-    }
-
-    @Override
-    public User getUserInPosition(int position) {
-        return dataController.getUserInPosition(viewIndexToDataIndexLocation.get(position));
+    public int getViewItemTypeInPosition(int position) {
+        return viewTypes.get(position);
     }
 
     @Override
@@ -79,22 +73,12 @@ public class PresenterUserDisplay extends BasePresenter<ViewContract.IUserDispla
     }
 
     @Override
-    public int getViewTypeForPosition(int position) {
-        return viewTypes.get(position);
+    public User getUserInPosition(int position) {
+        return dataController.getUserInPosition(viewIndexToDataIndexLocation.get(position));
     }
 
     @Override
-    public int getDataCollectionSize() {
-        return dataController.getNumberOfAds() + dataController.getNumberOfUsers() + 1;
-    }
-
-    @Override
-    public void onResume() {
-
-    }
-
-    @Override
-    public void onPause() {
-
+    public Header getHeaderData() {
+        return header;
     }
 }

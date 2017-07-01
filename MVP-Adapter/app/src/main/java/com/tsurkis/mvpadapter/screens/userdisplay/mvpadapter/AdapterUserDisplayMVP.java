@@ -3,7 +3,7 @@ package com.tsurkis.mvpadapter.screens.userdisplay.mvpadapter;
 import android.view.ViewGroup;
 
 import com.tsurkis.mvpadapter.R;
-import com.tsurkis.mvpadapter.mvpadapter.BaseMVPAdapter;
+import com.tsurkis.mvpadapter.baseclasses.ui.mvpadapter.BaseMVPAdapter;
 import com.tsurkis.mvpadapter.screens.userdisplay.ViewContract;
 
 import static com.tsurkis.mvpadapter.baseclasses.Constants.UserDisplayAdapterViewTypes.AD;

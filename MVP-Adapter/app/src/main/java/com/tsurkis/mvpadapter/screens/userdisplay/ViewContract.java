@@ -1,10 +1,10 @@
 package com.tsurkis.mvpadapter.screens.userdisplay;
 
-import com.tsurkis.mvpadapter.baseclasses.Ad;
-import com.tsurkis.mvpadapter.baseclasses.Header;
-import com.tsurkis.mvpadapter.baseclasses.IPresenter;
-import com.tsurkis.mvpadapter.baseclasses.IView;
-import com.tsurkis.mvpadapter.baseclasses.User;
+import com.tsurkis.mvpadapter.baseclasses.dataobjects.Ad;
+import com.tsurkis.mvpadapter.baseclasses.dataobjects.Header;
+import com.tsurkis.mvpadapter.baseclasses.architecture.IPresenter;
+import com.tsurkis.mvpadapter.baseclasses.architecture.IView;
+import com.tsurkis.mvpadapter.baseclasses.dataobjects.User;
 
 /**
  * Created by T.Surkis on 10-Jun-17.

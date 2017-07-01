@@ -3,8 +3,8 @@ package com.tsurkis.mvpadapter.screens.userdisplay.dataadapter;
 import android.view.ViewGroup;
 
 import com.tsurkis.mvpadapter.R;
-import com.tsurkis.mvpadapter.dataadapter.BaseDataAdapter;
-import com.tsurkis.mvpadapter.dataadapter.BaseDataViewHolder;
+import com.tsurkis.mvpadapter.baseclasses.ui.dataadapter.BaseDataAdapter;
+import com.tsurkis.mvpadapter.baseclasses.ui.dataadapter.BaseDataViewHolder;
 import com.tsurkis.mvpadapter.screens.userdisplay.ViewContract;
 
 import static com.tsurkis.mvpadapter.baseclasses.Constants.UserDisplayAdapterViewTypes.AD;

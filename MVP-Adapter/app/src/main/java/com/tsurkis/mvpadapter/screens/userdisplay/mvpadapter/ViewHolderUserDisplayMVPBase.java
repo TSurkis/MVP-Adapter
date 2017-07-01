@@ -2,7 +2,7 @@ package com.tsurkis.mvpadapter.screens.userdisplay.mvpadapter;
 
 import android.view.View;
 
-import com.tsurkis.mvpadapter.mvpadapter.BaseMVPViewHolder;
+import com.tsurkis.mvpadapter.baseclasses.ui.mvpadapter.BaseMVPViewHolder;
 import com.tsurkis.mvpadapter.screens.userdisplay.ViewContract;
 
 /**
