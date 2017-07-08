@@ -13,7 +13,7 @@ import com.tsurkis.mvpadapter.baseclasses.architecture.IBaseAdapterController;
  */
 public abstract class BaseModularMVPAdapter
         <AdapterControllerType extends IBaseAdapterController,
-        ViewHolderType extends BaseModularMVPViewHolder<AdapterControllerType>>
+         ViewHolderType extends BaseModularMVPViewHolder<AdapterControllerType>>
         extends RecyclerView.Adapter<ViewHolderType> {
 
     private final AdapterControllerType adapterController;

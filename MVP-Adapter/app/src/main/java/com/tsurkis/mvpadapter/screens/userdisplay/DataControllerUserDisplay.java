@@ -9,11 +9,16 @@ import java.util.Random;
 /**
  * Created by T.Surkis on 10-Jun-17.
  */
-public class DataControllerUserDisplay implements ViewContract.IUserDisplayDataController {
+class DataControllerUserDisplay implements ViewContract.IUserDisplayDataController {
     private ArrayList<User> users = new ArrayList<>();
     private final ArrayList<Ad> ads = new ArrayList<>();
 
-    public DataControllerUserDisplay() {
+    /**
+     * Constructor.
+     * <p>
+     * An example of data, this data can also be retrieved from a server, or a database.
+     */
+    DataControllerUserDisplay() {
         Random r = new Random();
         int adDataCollectionSize = 4;
 

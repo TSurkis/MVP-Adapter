@@ -5,6 +5,4 @@ package com.tsurkis.mvpadapter.baseclasses.architecture;
  */
 public interface IPresenter<ViewInterfaceType extends IView> {
     void loadView(ViewInterfaceType viewInterfaceType);
-    void onResume();
-    void onPause();
 }

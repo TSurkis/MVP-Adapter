@@ -13,7 +13,7 @@ import com.tsurkis.mvpadapter.baseclasses.architecture.IPresenter;
  */
 public abstract class BaseDataAdapter
         <PresenterType extends IPresenter,
-        ViewHolderType extends BaseDataViewHolder>
+         ViewHolderType extends BaseDataViewHolder>
         extends RecyclerView.Adapter<ViewHolderType> {
 
     private final PresenterType presenter;

@@ -5,5 +5,6 @@ package com.tsurkis.mvpadapter.baseclasses.architecture;
  */
 public interface IBaseAdapterController {
     int getCollectionSize();
+
     int getViewItemTypeInPosition(int position);
 }

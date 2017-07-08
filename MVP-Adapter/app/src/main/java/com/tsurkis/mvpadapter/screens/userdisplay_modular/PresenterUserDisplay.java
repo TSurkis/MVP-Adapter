@@ -21,16 +21,6 @@ public class PresenterUserDisplay extends BasePresenter<ViewContract.IUserDispla
     }
 
     @Override
-    public void onResume() {
-
-    }
-
-    @Override
-    public void onPause() {
-
-    }
-
-    @Override
     public IAdapterController getAdapterController() {
         return adapterController;
     }

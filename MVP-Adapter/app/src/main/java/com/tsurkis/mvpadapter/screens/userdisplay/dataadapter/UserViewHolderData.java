@@ -3,10 +3,10 @@ package com.tsurkis.mvpadapter.screens.userdisplay.dataadapter;
 import android.view.View;
 import android.widget.TextView;
 
+import com.tsurkis.mvpadapter.App;
 import com.tsurkis.mvpadapter.R;
 import com.tsurkis.mvpadapter.baseclasses.dataobjects.User;
 import com.tsurkis.mvpadapter.baseclasses.ui.dataadapter.BaseDataViewHolder;
-import com.tsurkis.mvpadapter.App;
 
 /**
  * Created by T.Surkis on 10-Jun-17.

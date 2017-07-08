@@ -14,6 +14,9 @@ import static com.tsurkis.mvpadapter.baseclasses.Constants.UserDisplayAdapterVie
 
 /**
  * Created by T.Surkis on 01-Jul-17.
+ *
+ * Responsible for handling the adapter. Leaves to presenter room to handle other UI
+ * related components.
  */
 class AdapterController implements ViewContract.IUserDisplayPresenter.IAdapterController {
     private final ViewContract.IUserDisplayDataController dataController;
@@ -23,6 +26,11 @@ class AdapterController implements ViewContract.IUserDisplayPresenter.IAdapterCo
 
     private Header header;
 
+    /**
+     * Constructor.
+     * <p>
+     * An example of mapping various data collections.
+     */
     AdapterController(ViewContract.IUserDisplayDataController dataController) {
         this.dataController = dataController;
         viewTypes.add(HEADER);

@@ -2,8 +2,8 @@ package com.tsurkis.mvpadapter.screens.userdisplay;
 
 import android.util.SparseIntArray;
 
-import com.tsurkis.mvpadapter.baseclasses.dataobjects.Ad;
 import com.tsurkis.mvpadapter.baseclasses.architecture.BasePresenter;
+import com.tsurkis.mvpadapter.baseclasses.dataobjects.Ad;
 import com.tsurkis.mvpadapter.baseclasses.dataobjects.Header;
 import com.tsurkis.mvpadapter.baseclasses.dataobjects.User;
 
@@ -16,13 +16,18 @@ import static com.tsurkis.mvpadapter.baseclasses.Constants.UserDisplayAdapterVie
 /**
  * Created by T.Surkis on 10-Jun-17.
  */
-public class PresenterUserDisplay extends BasePresenter<ViewContract.IUserDisplayView> implements ViewContract.IUserDisplayPresenter {
+class PresenterUserDisplay extends BasePresenter<ViewContract.IUserDisplayView> implements ViewContract.IUserDisplayPresenter {
     private final ViewContract.IUserDisplayDataController dataController = new DataControllerUserDisplay();
     private final ArrayList<Integer> viewTypes = new ArrayList<>();
     private final SparseIntArray viewIndexToDataIndexLocation = new SparseIntArray();
 
     private Header header;
 
+    /**
+     * Constructor.
+     * <p>
+     * An example of mapping various data collections.
+     */
     PresenterUserDisplay() {
         viewTypes.add(HEADER);
         int numberOfUsers = dataController.getNumberOfUsers();
@@ -86,15 +91,5 @@ public class PresenterUserDisplay extends BasePresenter<ViewContract.IUserDispla
     @Override
     public int getDataCollectionSize() {
         return dataController.getNumberOfAds() + dataController.getNumberOfUsers() + 1;
-    }
-
-    @Override
-    public void onResume() {
-
-    }
-
-    @Override
-    public void onPause() {
-
     }
 }

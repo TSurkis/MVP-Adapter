@@ -23,7 +23,7 @@ public class AdapterUserDisplayData extends BaseDataAdapter<ViewContract.IUserDi
     @Override
     public BaseDataViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         BaseDataViewHolder viewHolder = null;
-        switch(viewType) {
+        switch (viewType) {
             case USER: {
                 viewHolder = new UserViewHolderData(inflate(parent, R.layout.item_user));
                 break;
@@ -48,7 +48,7 @@ public class AdapterUserDisplayData extends BaseDataAdapter<ViewContract.IUserDi
 
     @Override
     public void onBindViewHolder(BaseDataViewHolder holder, int position) {
-        switch(holder.getItemViewType()) {
+        switch (holder.getItemViewType()) {
             case USER: {
                 holder.setDataInViews(getPresenter().getUserInPosition(position));
                 break;
