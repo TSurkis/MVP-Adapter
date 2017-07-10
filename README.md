@@ -1,4 +1,4 @@
-# MVP Adapter VS Data Adapter
+# MVP-Adapter
 
-A project example to display how MVP needs to be used regarding an adapter with multiple different views. 
-As an opposing and less efficient example, a Data Adapter concept is displayed alongside the MVP Adapter.
+Project example to enhance an Adapter and ViewHolder code to follow Object Oriented Programming. This project relates to the next article:
+https://android.jlelse.eu/what-type-of-android-developer-are-you-4d92a5eb7c9e
